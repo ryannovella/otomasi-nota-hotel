@@ -1,0 +1,20 @@
+{
+  "hotel_id": "cilacap_atrium",
+  "name": "Atrium Premiere Hotel Cilacap",
+  "master_pdf": "master_base.pdf",
+  "stamp_file": "stamp.png",
+  "stamp_rect": [
+    466.85,
+    411.65,
+    550.1,
+    584.15
+  ],
+  "date_format": "%d/%m/%y",
+  "default_agency": "KEMENTERIAN PU",
+  "default_city": "Cilacap",
+  "default_rate": 550000,
+  "room_start": 301,
+  "room_suffix": "",
+  "description": "ROOM CHARGE",
+  "has_stamp": true
+}

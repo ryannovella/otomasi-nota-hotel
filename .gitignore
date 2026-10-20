@@ -1,0 +1,32 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+
+# Output generated PDFs
+/output/
+
+# Temporary / Scratch workspace & test files
+/scratch/
+/.agents/
+/dummy
+/*.png
+/*.jpg
+/*.jpeg
+/*.pdf
+/*.txt
+!requirements.txt
+test_*.pdf
+*_preview.png
+golden_*_sample.png
+fixed_table_preview.png
+extracted_img.png
+
+# System & Editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.code-workspace

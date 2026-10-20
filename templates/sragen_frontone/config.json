@@ -1,0 +1,26 @@
+{
+  "hotel_id": "sragen_frontone",
+  "name": "Front One Hotel Sragen",
+  "master_pdf": "master_base.pdf",
+  "stamp_file": "stamp2.png",
+  "stamp_files": [
+    "stamp.png",
+    "stamp2.png"
+  ],
+  "stamp_rect": [
+    425.0,
+    153.0,
+    555.0,
+    245.0
+  ],
+  "date_format": "%d-%b-%Y",
+  "printed_date_format": "%d-%m-%Y %H:%M:%S",
+  "printed_user": "NOFI",
+  "default_agency": "KEMENTRIAN PU JATENG",
+  "default_city": "SEMARANG, JAWA TENGAH",
+  "default_rate": 680000,
+  "room_start": 201,
+  "room_suffix": "DLT",
+  "description": "ROOM BREAKFAST",
+  "has_stamp": true
+}

@@ -1,0 +1,25 @@
+{
+  "hotel_id": "banyumas_wisata_niaga",
+  "name": "Hotel Wisata Niaga Purwokerto",
+  "master_pdf": "master_base.pdf",
+  "stamp_file": "stamp.png",
+  "qr_file": "qr.png",
+  "logo_file": "logo.png",
+  "stamp_rect": [
+    424.32,
+    358.56,
+    531.60,
+    413.04
+  ],
+  "date_format": "%d/%m/%Y",
+  "default_agency": "KEMENTERIAN PU",
+  "default_city": "Purwokerto",
+  "default_rate": 455000,
+  "room_start": 401,
+  "room_suffix": "PRDX",
+  "default_room_desc": "PREMIUM DELUXE RBF",
+  "staff_name": "TEGUH",
+  "checker_name": "JAKA",
+  "pcid": "PCKG",
+  "has_stamp": true
+}

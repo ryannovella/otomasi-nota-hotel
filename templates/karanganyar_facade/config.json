@@ -1,0 +1,16 @@
+{
+  "hotel_id": "karanganyar_facade",
+  "name": "Facade Boutique Hotel Tawangmangu",
+  "master_pdf": "master_base.pdf",
+  "stamp_file": "stamp.png",
+  "stamp_rect": [443.51, 257.76, 561.33, 375.58],
+  "date_format": "%d-%b-%Y",
+  "printed_date_format": "%d-%m-%Y %H:%M:%S",
+  "printed_user": "YANUAR",
+  "default_agency": "KEMENTERIAN PU",
+  "default_city": "SEMARANG",
+  "default_rate": 550000,
+  "room_suffix": "PRMTT",
+  "description": "ROOM BREAKFAST",
+  "has_stamp": false
+}

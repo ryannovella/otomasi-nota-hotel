@@ -1,0 +1,25 @@
+{
+  "hotel_id": "wonogiri_golden",
+  "name": "Golden Hotel & Villa Wonogiri",
+  "master_1night": "master_1night.pdf",
+  "stamp_file": "stamp.png",
+  "stamp_rect": [392.5, 532.4, 539.4, 679.3],
+  "date_format": "%d-%b-%Y",
+  "doc_date_format": "%d %B %Y",
+  "folio_pattern": "{rand:03d}/GuestBill/GH/{month_name}/{year}",
+  "fields_1night": {
+    "nomor": { "x": 146.0, "y": 187.4, "font": "lucida", "size": 11.0 },
+    "guest_name": { "x": 410.1, "y": 187.4, "font": "lucida", "size": 11.0 },
+    "doc_date": { "x": 95.6, "y": 234.9, "font": "lucida", "size": 11.0 },
+    "table_date": { "x": 100.9, "y": 330.6, "font": "lucida", "size": 11.0 },
+    "table_type": { "x": 225.2, "y": 330.6, "font": "lucida", "size": 11.0, "default": "1 Familly room" },
+    "table_night": { "x": 336.6, "y": 331.4, "font": "lucida", "size": 11.0, "default": "1" },
+    "table_rate": { "x": 370.4, "y": 331.4, "font": "lucida", "size": 11.0 },
+    "table_total": { "x": 466.5, "y": 331.4, "font": "lucida", "size": 11.0 },
+    "terbilang": { "x": 135.9, "y": 427.2, "font": "lucida", "size": 17.87 },
+    "total_rp": { "x": 50.3, "y": 474.6, "font": "lucida", "size": 11.0 },
+    "pelunasan_rp": { "x": 50.3, "y": 494.6, "font": "lucida", "size": 11.0 },
+    "city_date": { "x": 395.5, "y": 578.3, "font": "lucida", "size": 11.0 },
+    "hotel_sign": { "x": 428.1, "y": 631.2, "font": "lucida", "size": 10.0, "default": "Golden Hotel" }
+  }
+}

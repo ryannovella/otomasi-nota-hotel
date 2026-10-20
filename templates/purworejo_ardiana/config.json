@@ -1,0 +1,22 @@
+{
+  "hotel_id": "purworejo_ardiana",
+  "name": "Ardiana Suite Hotel Purworejo",
+  "master_pdf": "master_base.pdf",
+  "stamp_file": "stamp.png",
+  "stamp_rect": [
+    446.0,
+    220.0,
+    550.0,
+    252.0
+  ],
+  "date_format": "%d-%b-%Y",
+  "printed_date_format": "%d-%m-%Y %H:%M:%S",
+  "printed_user": "BAYU",
+  "default_agency": "KEMENTERIAN PU",
+  "default_city": "PURWOREJO",
+  "default_rate": 750000,
+  "room_start": 201,
+  "room_suffix": "CT",
+  "description": "ROOM BREAKFAST",
+  "has_stamp": true
+}

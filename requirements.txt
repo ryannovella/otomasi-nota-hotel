@@ -1,0 +1,4 @@
+bottle>=0.12.25
+PyMuPDF>=1.23.0
+pillow>=10.0.0
+pywebview>=5.0.0

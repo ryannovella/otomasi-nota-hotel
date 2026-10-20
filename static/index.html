@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otomasi Nota Hotel - BPPW Jateng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="dark-theme">
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 11h2M13 11h2M9 15h2M13 15h2"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Otomasi Nota Hotel</h1>
+          <span class="badge-dept">BPPW Jawa Tengah</span>
+        </div>
+      </div>
+
+      <nav class="nav-tabs">
+        <button class="nav-tab active" data-tab="generator" id="tab-generator-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Buat Nota
+        </button>
+        <button class="nav-tab" data-tab="employees" id="tab-employees-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Daftar Personel (<span id="emp-count-badge">28</span>)
+        </button>
+        <button class="nav-tab" data-tab="hotels" id="tab-hotels-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2z"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          Profil Hotel
+        </button>
+        <button class="nav-tab" data-tab="history" id="tab-history-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Riwayat Output
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle-btn" class="icon-btn" title="Ganti Tema">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Tabs -->
+    <main class="main-content">
+
+      <!-- TAB 1: GENERATOR NOTA -->
+      <section id="view-generator" class="tab-view active">
+        <div class="generator-grid">
+          
+          <!-- Control Panel (Left Column) -->
+          <div class="panel-card setup-panel">
+            <div class="panel-header">
+              <h2>Parameter Perjalanan Dinas</h2>
+              <p>Tentukan hotel, tanggal, dan personel rombongan.</p>
+            </div>
+
+            <!-- Hotel Selector -->
+            <div class="form-group">
+              <label for="hotel-select">Hotel / Penginapan</label>
+              <div class="select-wrapper">
+                <select id="hotel-select" class="form-control">
+                  <!-- Populated by JS -->
+                </select>
+              </div>
+              <div id="hotel-meta-badge" class="meta-badge">
+                <span class="badge-city" id="hotel-city-txt">Kabupaten Karanganyar</span>
+                <span class="badge-rate" id="hotel-rate-txt">Rp 678.000 / malam</span>
+              </div>
+            </div>
+
+            <!-- Date Range -->
+            <div class="form-row date-row">
+              <div class="form-group">
+                <label for="checkin-date">Tanggal Check-In</label>
+                <input type="date" id="checkin-date" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="checkout-date">Tanggal Check-Out</label>
+                <input type="date" id="checkout-date" class="form-control">
+              </div>
+            </div>
+
+            <div class="stay-info-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Durasi Inap: <strong id="stay-duration-txt">1 Malam</strong>
+            </div>
+
+            <!-- Options: Stamp Toggle -->
+            <div class="option-toggle-box">
+              <div class="toggle-text">
+                <strong>Stempel & Tanda Tangan Digital</strong>
+                <small>Bubuhkan stempel transparan otomatis di atas garis paraf.</small>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="stamp-toggle" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Employee Multi-Selector -->
+            <div class="employee-picker-section">
+              <div class="picker-header">
+                <label>Pilih Personel Rombongan (<span id="selected-emp-count">0</span>)</label>
+                <div class="picker-quick-btns">
+                  <button type="button" id="btn-select-all" class="text-btn">Pilih Semua</button>
+                  <button type="button" id="btn-clear-all" class="text-btn">Kosongkan</button>
+                </div>
+              </div>
+
+              <div class="search-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="employee-search" placeholder="Cari nama pegawai...">
+              </div>
+
+              <div class="employee-checkbox-list" id="employee-list-container">
+                <!-- Checkboxes populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Table Review & Actions (Right Column) -->
+          <div class="panel-card preview-panel">
+            <div class="panel-header flex-header">
+              <div>
+                <h2>Rincian Nota Rombongan</h2>
+                <p>Data otomatis diisikan dan siap diedit langsung pada tabel di bawah.</p>
+              </div>
+              <button id="btn-randomize-folio" class="secondary-btn" title="Acak ulang nomor folio">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                Acak Ulang Folio
+              </button>
+            </div>
+
+            <div class="table-container">
+              <table class="data-table" id="guests-table">
+                <thead>
+                  <tr>
+                    <th width="40">#</th>
+                    <th>Nama Personel</th>
+                    <th width="120">No. Kamar</th>
+                    <th width="190">Nomor Folio / Bill</th>
+                    <th width="140">Tarif / Malam (Rp)</th>
+                    <th width="130">Subtotal</th>
+                    <th width="50">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="guests-table-body">
+                  <tr class="empty-row">
+                    <td colspan="7">
+                      <div class="empty-state">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="11" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                        <p>Silakan centang personel di panel sebelah kiri untuk menambahkan ke daftar nota.</p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Cost Summary Card -->
+            <div class="summary-card" id="summary-card">
+              <div class="summary-grid">
+                <div class="summary-item">
+                  <span class="label">Total Personel</span>
+                  <span class="value" id="summary-total-guests">0 Orang</span>
+                </div>
+                <div class="summary-item">
+                  <span class="label">Durasi Menginap</span>
+                  <span class="value" id="summary-total-nights">1 Malam</span>
+                </div>
+                <div class="summary-item highlight">
+                  <span class="label">Total Biaya SPPD Hotel</span>
+                  <span class="value" id="summary-total-cost">Rp 0</span>
+                </div>
+              </div>
+              <div class="terbilang-preview">
+                <span class="badge-terbilang">Terbilang:</span>
+                <span id="summary-terbilang-txt">NOL RUPIAH</span>
+              </div>
+            </div>
+
+            <!-- Action Trigger -->
+            <div class="generate-bar">
+              <button id="btn-generate" class="primary-btn pulse-glow" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                Generate Dokumen PDF Nota
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 2: KELOLA PERSONEL -->
+      <section id="view-employees" class="tab-view">
+        <div class="panel-card">
+          <div class="panel-header flex-header">
+            <div>
+              <h2>Master Data Personel Pegawai</h2>
+              <p>Daftar pejabat dan staf BPPW Jawa Tengah untuk keperluan SPPD.</p>
+            </div>
+            <div class="header-btns">
+              <button id="btn-add-employee" class="primary-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Tambah Pegawai
+              </button>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th width="60">No</th>
+                  <th>Nama Lengkap</th>
+                  <th>Instansi / Kedinasan</th>
+                  <th width="120">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="master-employee-table-body">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: PROFIL HOTEL -->
+      <section id="view-hotels" class="tab-view">
+        <div class="panel-card">
+          <div class="panel-header">
+            <h2>Profil & Template Hotel</h2>
+            <p>Hotel yang terdaftar dan siap digunakan dalam aplikasi.</p>
+          </div>
+
+          <div class="hotels-grid" id="hotels-grid-container">
+            <!-- Populated by JS -->
+          </div>
+
+          <div class="info-callout">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <div>
+              <strong>Menambahkan Hotel Baru?</strong>
+              <p>Sistem ini dirancang sangat modular. Anda cukup menempatkan master PDF kosongan dan file <code>config.json</code> di dalam folder <code>templates/&lt;nama_hotel&gt;/</code>, lalu daftarkan nama hotel pada <code>data/hotels.json</code>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: RIWAYAT OUTPUT -->
+      <section id="view-history" class="tab-view">
+        <div class="panel-card">
+          <div class="panel-header">
+            <h2>Riwayat Dokumen PDF yang Telah Dibuat</h2>
+            <p>Akses cepat ke berkas nota yang tersimpan di folder output.</p>
+          </div>
+
+          <div class="history-list" id="history-list-container">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Modal Sukses Generate -->
+    <div class="modal-overlay" id="modal-success">
+      <div class="modal-content glass-card">
+        <div class="modal-header">
+          <div class="success-icon-badge">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3>Dokumen PDF Berhasil Dibuat!</h3>
+            <p id="success-modal-desc">Nota telah digenerate dan tersimpan rapi.</p>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="file-info-box">
+            <span class="label">File Gabungan (Multi-page):</span>
+            <strong id="success-merged-name" class="file-name">-</strong>
+            <span class="label mt-2">Folder Penyimpanan:</span>
+            <code id="success-folder-path">-</code>
+          </div>
+
+          <div class="modal-actions-grid">
+            <button id="btn-open-pdf-direct" class="primary-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Buka File PDF Langsung
+            </button>
+            <button id="btn-open-folder-direct" class="secondary-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              Buka Folder di Windows Explorer
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="btn-close-modal" class="text-btn">Tutup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Tambah Pegawai -->
+    <div class="modal-overlay" id="modal-employee">
+      <div class="modal-content glass-card">
+        <div class="modal-header">
+          <h3>Tambah Personel Pegawai</h3>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="new-emp-name">Nama Lengkap</label>
+            <input type="text" id="new-emp-name" class="form-control" placeholder="Contoh: Budi Santoso, S.T.">
+          </div>
+          <div class="form-group">
+            <label for="new-emp-agency">Instansi / Bagian</label>
+            <input type="text" id="new-emp-agency" class="form-control" value="BPPW Jawa Tengah / Kementerian PU">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-cancel-emp" class="secondary-btn">Batal</button>
+          <button id="btn-save-emp" class="primary-btn">Simpan Pegawai</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

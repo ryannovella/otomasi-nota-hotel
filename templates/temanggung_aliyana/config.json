@@ -1,0 +1,16 @@
+{
+  "hotel_id": "temanggung_aliyana",
+  "name": "Hotel Aliyana Temanggung",
+  "master_pdf": "master_base.pdf",
+  "date_format": "%m/%d/%Y",
+  "table_date_format": "%d %b %Y",
+  "print_date_format": "%d %b %Y %I:%M %p",
+  "default_agency": "",
+  "default_city": "Temanggung",
+  "default_rate": 550000,
+  "default_room_start": 114,
+  "default_room_type": "SDLX",
+  "room_suffix": "",
+  "default_room_desc": "Room",
+  "has_stamp": false
+}

@@ -1,0 +1,14 @@
+{
+  "hotel_id": "kebumen_trio_azana",
+  "name": "Trio Azana Style Hotel Kebumen",
+  "master_pdf": "master_base.pdf",
+  "stamp_file": "logo stempel.svg",
+  "stamp_rect": [403.0, 660.0, 554.0, 706.6],
+  "date_format": "%d-%b-%Y",
+  "default_agency": "KEMENTRIAN PU",
+  "default_city": "SEMARANG",
+  "default_rate": 600000,
+  "room_suffix": "DLT",
+  "description": "ROOM BREAKFAST",
+  "has_stamp": true
+}

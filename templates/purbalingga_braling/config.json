@@ -1,0 +1,44 @@
+{
+  "hotel_id": "purbalingga_braling",
+  "name": "Braling Grand Hotel Purbalingga",
+  "master_pdf": "master_base.pdf",
+  "stamp_file": "stamp1.png",
+  "stamp_files": [
+    "stamp1.png",
+    "stamp2.png",
+    "stamp3.png",
+    "stamp4.png",
+    "stamp5.png"
+  ],
+  "signature_files": [
+    "sig1.png",
+    "sig2.png",
+    "sig3.png",
+    "sig4.png",
+    "sig5.png",
+    "sig6.png"
+  ],
+  "signature_configs": {
+    "stamp1": { "rect": [461.96, 193.00, 526.04, 289.00] },
+    "stamp2": { "rect": [461.37, 193.00, 526.63, 289.00] },
+    "stamp3": { "rect": [460.00, 194.00, 532.11, 288.00] },
+    "stamp4": { "rect": [460.00, 194.00, 532.11, 288.00] },
+    "stamp5": { "rect": [461.25, 193.50, 528.75, 288.50] },
+    "sig1": { "rect": [459.48, 192.27, 524.43, 290.47] },
+    "sig2": { "rect": [464.27, 196.54, 531.25, 290.65] },
+    "sig3": { "rect": [462.02, 197.03, 525.88, 295.69] },
+    "sig4": { "rect": [457.47, 192.98, 524.15, 286.80] },
+    "sig5": { "rect": [467.69, 190.30, 532.29, 288.48] },
+    "sig6": { "rect": [458.01, 198.13, 524.69, 291.95] }
+  },
+  "date_format": "%d-%b-%Y",
+  "printed_date_format": "%d-%m-%Y %H:%M:%S",
+  "printed_user": "IVANA",
+  "default_agency": "KEMENTERIAN PU",
+  "default_city": "PURBALINGGA",
+  "default_rate": 600000,
+  "room_start": 501,
+  "room_suffix": "DLXT",
+  "description": "ROOM CHARGE",
+  "has_stamp": true
+}

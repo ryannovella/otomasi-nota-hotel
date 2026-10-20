@@ -1,0 +1,21 @@
+{
+  "hotel_id": "banjarnegara_surya_yudha",
+  "name": "Hotel Surya Yudha Banjarnegara",
+  "master_pdf": "master_base.pdf",
+  "stamp_file": "stamp.png",
+  "stamp_rect": [
+    409.92,
+    626.8,
+    546.24,
+    724.24
+  ],
+  "date_format": "%d-%b-%Y",
+  "printed_date_format": "%d-%m-%Y %H:%M:%S",
+  "default_agency": "KEMENTERIAN PU",
+  "default_city": "SEMARANG",
+  "default_rate": 440000,
+  "room_start": 401,
+  "room_suffix": "SPD",
+  "description": "ROOM CHARGE",
+  "has_stamp": true
+}

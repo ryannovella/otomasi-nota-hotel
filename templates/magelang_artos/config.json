@@ -1,0 +1,15 @@
+{
+  "hotel_id": "magelang_artos",
+  "name": "Grand Artos Hotel & Convention Magelang",
+  "master_pdf": "master_base.pdf",
+  "date_format": "%d %b %Y",
+  "printed_date_format": "%d %B %Y %H:%M",
+  "printed_user": "468",
+  "default_agency": "Kementerian PU",
+  "default_city": "Magelang",
+  "default_rate": 670000,
+  "room_start": 501,
+  "room_suffix": "",
+  "description": "Room Charge",
+  "has_stamp": false
+}

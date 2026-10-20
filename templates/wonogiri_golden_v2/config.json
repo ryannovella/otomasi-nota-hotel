@@ -1,0 +1,38 @@
+{
+  "hotel_id": "wonogiri_golden_v2",
+  "name": "Golden Hotel & Villa Wonogiri (v2.0)",
+  "master_1night": "master_1night.pdf",
+  "stamp_file": "stamp.png",
+  "stamp_rect": [402.4, 470.4, 506.0, 550.4],
+  "fonts": {
+    "arial": "fonts/arial.ttf",
+    "arial_bold": "fonts/arial_bold.ttf",
+    "arial_narrow": "fonts/arial_narrow_bold.ttf",
+    "bebas": "fonts/bebas_regular.ttf"
+  },
+  "fields": {
+    "header_day": { "x": 482.57, "y": 187.87, "font": "arial_narrow", "size": 10.54 },
+    "header_date": { "x": 517.61, "y": 187.87, "font": "bebas", "size": 10.54 },
+    "label_kepada": { "x": 35.35, "y": 204.92, "font": "arial_bold", "size": 11.22, "text": "Kepada" },
+    "label_invoice": { "x": 35.35, "y": 218.90, "font": "arial", "size": 10.03, "text": "No. Invoice" },
+    "label_nama": { "x": 35.35, "y": 232.94, "font": "arial", "size": 10.03, "text": "Nama" },
+    "label_checkin": { "x": 35.35, "y": 247.99, "font": "arial", "size": 10.03, "text": "Tanggal Check in" },
+    "label_checkout": { "x": 35.35, "y": 262.03, "font": "arial", "size": 10.03, "text": "Tanggal Check out" },
+    "val_kepada": { "x": 118.67, "y": 204.92, "font": "arial", "size": 10.03 },
+    "val_invoice": { "x": 118.67, "y": 218.90, "font": "arial", "size": 10.03 },
+    "val_nama": { "x": 118.67, "y": 232.94, "font": "arial", "size": 10.03 },
+    "val_checkin": { "x": 118.67, "y": 247.99, "font": "arial", "size": 10.03 },
+    "val_checkout": { "x": 118.67, "y": 262.03, "font": "arial", "size": 10.03 },
+    "table_y": 324.99,
+    "table_no_x": 60.33,
+    "table_type_x": 129.58,
+    "table_qty_x": 257.30,
+    "table_price_x": 302.34,
+    "table_amount_x": 437.26,
+    "table_row_dy": 14.6,
+    "total_line": { "x": 386.97, "y": 406.51, "font": "arial_narrow", "size": 10.54 },
+    "total_amount_prefix": { "x": 388.29, "y": 419.16, "font": "arial_narrow", "size": 10.54, "text": "Total " },
+    "total_amount_val": { "x": 410.39, "y": 419.16, "font": "arial_narrow", "size": 10.54 },
+    "balance_line": { "x": 388.26, "y": 431.80, "font": "arial_narrow", "size": 10.54 }
+  }
+}
